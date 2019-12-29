@@ -11,6 +11,11 @@
 		display: inline-block;
 		position: relative;
 
+		#post-image{
+			box-shadow: 0 0 80px -30px rgb(100, 171, 199);
+			max-height: 500px;
+		}
+
 		img {
 			display: block;
 		}
