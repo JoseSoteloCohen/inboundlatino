@@ -17,7 +17,7 @@ module.exports = {
         theme_color: '#003699',
         display: 'minimal-ui',
         lang: 'es',
-        icon: './src/assets/images/iso-250x250.png', // This path is relative to the root of the site.
+        icon: './src/images/iso-250x250.png', // This path is relative to the root of the site.
       },
     },
     {
