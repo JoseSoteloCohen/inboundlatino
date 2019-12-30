@@ -69,5 +69,87 @@ module.exports = {
         path: 'src/images',
       },
     },
+    {
+      resolve: 'gatsby-source-github',
+      options: {
+        headers: {
+          Authorization: `Bearer 8c0bde6722e1601a92538ed3782122bb98026440`, // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
+        },
+        queries: [
+          `{
+            repository(owner: "JoseSoteloCohen", name: "Blackout-WordPress-Dark-mode-Widget") {
+              ref(qualifiedName: "master") {
+              target {
+                ... on Commit {
+                  history(first: 12) {
+                    edges {
+                      node {
+                        repository{
+                          name
+                        }
+                        oid
+                        commitUrl
+                        messageHeadline
+                        messageBody
+                        pushedDate
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            }
+          }`,
+          `{
+          repository(owner: "JoseSoteloCohen", name: "sendy-elements") {
+            ref(qualifiedName: "master") {
+              target {
+                ... on Commit {
+                  history(first: 12) {
+                    edges {
+                      node {
+                        repository{
+                          name
+                        }
+                        oid
+                        commitUrl
+                        messageHeadline
+                        messageBody
+                        pushedDate
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }`,
+          `{
+          repository(owner: "JoseSoteloCohen", name: "Moo-Elements") {
+            ref(qualifiedName: "master") {
+              target {
+                ... on Commit {
+                  history(first: 12) {
+                    edges {
+                      node {
+                        repository{
+                          name
+                        }
+                        oid
+                        commitUrl
+                        messageHeadline
+                        messageBody
+                        pushedDate
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }`,
+        ],
+      },
+    },
   ],
 };

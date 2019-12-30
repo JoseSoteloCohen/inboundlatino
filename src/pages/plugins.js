@@ -11,11 +11,11 @@ import sendy from '../images/sendy-elements-icon-512x512.png'
 const plugins = (props) => (
     <Layout>
         <Helmet>
-            <title>Plugins de WordPress</title>
-            <meta name="description" content="Landing Page" />
+            <title>Plugins de WordPress hechos por José Sotelo</title>
+            <meta name="description" content="Plugins de WordPress que cuentan con integraciones entre Elementor Pro, Sendy y Moosend. Además, un widget que le permite a tus usuarios activar modo oscuro en tu sitio web" />
         </Helmet>
 
-        <BannerLanding title={"Plugins para WordPress"} description={"Hechos para facilitarte la vida sin sacrificar el performance de tu sitio web."}/>
+        <BannerLanding title={"Plugins para WordPress"} description={"Hechos para facilitarte la vida sin sacrificar el performance de tu sitio web." } style={"style2"}/>
 
         <div id="main">
             <section id="one">

@@ -9,7 +9,6 @@ export const query = graphql`
         mdx(frontmatter: { slug: { eq: $slug } }) {
             frontmatter {
                 title
-                author
                 excerpt
                 image {
                     publicURL

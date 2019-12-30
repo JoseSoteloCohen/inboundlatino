@@ -12,9 +12,9 @@ export default () => {
             <Layout>
                 <Helmet>
                     <title>últimos artículos sobre Marketing Digital | Inbound Latino</title>
-                    <meta name="description" content="Landing Page" />
+                    <meta name="description" content="Todo sobre marketing digital y desarrollo web" />
                 </Helmet>
-                <BannerLanding title={"Lo último en mi blog"} description={"Todo sobre marketing digital y desarrollo web"}/>
+                <BannerLanding title={"Lo último en mi blog"} description={"Todo sobre marketing digital y desarrollo web"} style={"style1"}/>
                 <div>
                     <div className="inner post-feed">
                         {posts.map(post => (
