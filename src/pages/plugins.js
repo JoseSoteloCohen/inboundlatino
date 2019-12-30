@@ -4,18 +4,18 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import BannerLanding from '../components/BannerLanding'
 
-const blackout = '/static/7537bd8e58a534386f44b697c0356774/c7de9/blackout-icon-512x512.webp'
-const sendy = '/static/df59ac0f7984c20196bb2a4f529e0de9/c7de9/sendy-elements-icon-512x512.webp'
-const mooElements = '/static/9a5c18a9b53f3cd1068e1278360a03d5/c7de9/moo-elements-icon-512x512.webp'
+import blackout from '../images/blackout-icon-512x512.png'
+import mooElements from '../images/moo-elements-icon-512x512.png'
+import sendy from '../images/sendy-elements-icon-512x512.png'
 
 const plugins = (props) => (
     <Layout>
         <Helmet>
-            <title>Plugins de WordPress</title>
-            <meta name="description" content="Landing Page" />
+            <title>Plugins de WordPress hechos por José Sotelo</title>
+            <meta name="description" content="Plugins de WordPress que cuentan con integraciones entre Elementor Pro, Sendy y Moosend. Además, un widget que le permite a tus usuarios activar modo oscuro en tu sitio web" />
         </Helmet>
 
-        <BannerLanding title={"Plugins para WordPress"} description={"Hechos para facilitarte la vida sin sacrificar el performance de tu sitio web."}/>
+        <BannerLanding title={"Plugins para WordPress"} description={"Hechos para facilitarte la vida sin sacrificar el performance de tu sitio web." } style={"style2"}/>
 
         <div id="main">
             <section id="one">

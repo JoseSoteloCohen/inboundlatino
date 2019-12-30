@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = (props) => (
-    <footer id="footer">
+    <footer id="footer" className="align-center">
         <div className="inner">
             <ul className="icons">
                 <li><a target="_blank" rel="noopener nofollow noreferrer" href="https://twitter.com/Inbound_Latino" className="icon alt fa-twitter"><span className="label">Twitter</span></a></li>
