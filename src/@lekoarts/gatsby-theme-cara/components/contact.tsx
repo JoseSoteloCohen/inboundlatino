@@ -36,10 +36,7 @@ const Contact = ({ offset }: { offset: number }) => (
     </Divider>
     <Content speed={0.4} offset={offset}>
       <Inner>
-        {/*<ContactMDX />*/}
-        <h2 className="css-18m2xie">Get in Touch!</h2>
-        <p className="css-v5ivh2">Say <a className="xeno-open-widget css-o7kmxq" href="#">Hi</a> or find me on other platforms: <a className="css-o7kmxq" href="https://profiles.wordpress.org/josesotelocohen/" className="css-o7kmxq">WordPress</a>, <a href="https://github.com/JoseSoteloCohen" className="css-o7kmxq">Github</a> & <a href="https://www.linkedin.com/in/jsotelocohen/" className="css-o7kmxq">LinkedIn</a>
-        </p>
+        <ContactMDX />
       </Inner>
       <Footer />
     </Content>
