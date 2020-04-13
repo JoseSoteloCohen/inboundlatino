@@ -37,12 +37,6 @@ const Contact = ({ offset }: { offset: number }) => (
     <Content speed={0.4} offset={offset}>
       <Inner>
         <ContactMDX />
-<<<<<<< Updated upstream
-=======
-        <h2>Get in Touch!</h2>
-        <p>Say <span class="xeno-open-widget">Hi</span> or find me on other platforms: [WordPress](https://profiles.wordpress.org/josesotelocohen/), [Github](https://github.com/JoseSoteloCohen) & [LinkedIn](https://www.linkedin.com/in/jsotelocohen/)
-        </p>
->>>>>>> Stashed changes
       </Inner>
       <Footer />
     </Content>
