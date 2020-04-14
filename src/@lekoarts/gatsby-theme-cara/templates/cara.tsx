@@ -12,8 +12,8 @@ const Cara = () => (
     <Parallax pages={6}>
       <Hero offset={0} />
       <Projects offset={1} />
-      <Plugins offset={2}/>
-      <About offset={4} />
+      <Plugins offset={3}/>
+      {/*<About offset={4} />*/}
       <Contact offset={5} />
     </Parallax>
   </Layout>
