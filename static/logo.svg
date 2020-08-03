@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 248 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0.299718,0.833139)">
+        <g transform="matrix(1,0,0,1,-0.299718,9.93961)">
+            <text x="0px" y="33.683px" style="font-family:'Lato-Black', 'Lato', sans-serif;font-weight:900;font-size:45px;fill:white;">José</text>
+        </g>
+        <g transform="matrix(1,0,0,1,113.522,9.93961)">
+            <text x="0px" y="33.683px" style="font-family:'Lato-Black', 'Lato', sans-serif;font-weight:900;font-size:45px;fill:white;">Sotelo</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-32.7194,0.64025)">
+            <path d="M134.241,44.754C131.4,44.754 129.058,42.522 128.98,39.709L128.979,39.491C128.938,36.617 131.327,34.289 134.241,34.289C137.015,34.289 139.464,36.617 139.504,39.491C139.464,42.406 137.015,44.754 134.241,44.754Z" style="fill:rgb(49,130,206);fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>

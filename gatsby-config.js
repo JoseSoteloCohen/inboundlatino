@@ -1,46 +1,72 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require("dotenv").config()
 
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
+
+if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
+  throw new Error(
+    "Contentful spaceId and the access token need to be provided."
+  )
+}
+
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // Of course you can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-cara/gatsby-config.js
-    siteTitleAlt: `Inbound Latino - Digital Marketing Services by José Sotelo`,
-    author: 'José Sotelo'
+    menu: [
+      { name: "Inicio", to: "/" },
+      { name: "Blog", to: "/blog" },
+      { name: "Reseñas", to: "/resenas" },
+    ],
+    links: {
+      linkedIn: "https://www.linkedin.com/in/jsotelocohen/",
+      wordpress: "https://profiles.wordpress.org/josesotelocohen//",
+      github: "https://github.com/JoseSoteloCohen",
+      twitter: "https://twitter.com/Inbound_Latino",
+    },
+    locale: "es-CO",
+    title: `José Sotelo`,
+    description: `Conoce mi trabajo en desarrollo web y descubre las mejores reseñas de SaaS`,
+    author: `@josesotelo`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `@lekoarts/gatsby-theme-cara`,
-      // See the theme's README for all available options
-      options: {},
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: CONTENTFUL_SPACE_ID,
+        accessToken: CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Inbound Latino - Digital Marketing Services by José Sotelo`,
-        short_name: `Inbound Latino`,
-        description: `Portfolio website of Inbound Latino by José Sotelo`,
+        name: `Inbound Latino`,
+        short_name: `Inbound`,
         start_url: `/`,
-        background_color: `#141821`,
-        theme_color: `#244176`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/iso.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/iso-solo.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
+        background_color: `rgb(21, 32, 43)`,
+        theme_color: `rgb(21, 32, 43)`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
   ],
 }
