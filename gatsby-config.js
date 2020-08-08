@@ -1,6 +1,4 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config()
 
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
@@ -9,6 +7,9 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
     "Contentful spaceId and the access token need to be provided."
   )
 }
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -57,14 +58,7 @@ module.exports = {
         background_color: `rgb(21, 32, 43)`,
         theme_color: `rgb(21, 32, 43)`,
         display: `standalone`,
-        icon: `src/icons/icon-144x144.png`,
-        icons: [
-          {
-            src: `src/images/icon.png`,
-            sizes: `144x144`,
-            type: `image/png`,
-          }
-        ],
+        icon: `src/images/icon-144x144.png`,
         legacy: false
       },
     },
