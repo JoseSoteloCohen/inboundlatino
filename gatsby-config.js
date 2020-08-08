@@ -59,7 +59,7 @@ module.exports = {
         background_color: `rgb(21, 32, 43)`,
         theme_color: `rgb(21, 32, 43)`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `icon.png`,
       },
     },
   ],
