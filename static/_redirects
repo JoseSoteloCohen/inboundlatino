@@ -1,2 +1,2 @@
 #API Redirects
-/sendfox-contact/*  https://api.sendfox.com/:splat
+/sendfox-contact/  https://api.sendfox.com/contacts

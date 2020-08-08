@@ -1,7 +1,6 @@
 export function addToSendfox(email, list, name, lastname) {
 
-  const encodedUrl = 'https://api.sendfox.com/contacts';
-  //const encodedUrl = '/sendfox-contact/';
+  const encodedUrl = '/sendfox-contact/';
 
   const headers = new Headers();
   headers.append('Authorization', `Bearer ${process.env.GATSBY_SENDFOX_API_TOKEN}`);
