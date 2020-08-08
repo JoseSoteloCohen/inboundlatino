@@ -11,13 +11,6 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 }
 
 module.exports = {
-  icons: [
-    {
-      src: `src/images/icon.png`,
-      sizes: `144x144`,
-      type: `image/png`,
-    }
-  ],
   siteMetadata: {
     menu: [
       { name: "Inicio", to: "/" },
@@ -65,6 +58,13 @@ module.exports = {
         theme_color: `rgb(21, 32, 43)`,
         display: `standalone`,
         icon: `src/images/icon.png`,
+        icons: [
+          {
+            src: `src/images/icon.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          }
+        ],
         legacy: false
       },
     },
