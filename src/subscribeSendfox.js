@@ -12,6 +12,7 @@ export function addToSendfox(email, list, name, lastname) {
     lists: list.list
   }
   const config = {
+    method: 'POST',
     headers: headers,
     body: JSON.stringify(data)
   }
