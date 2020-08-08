@@ -12,20 +12,19 @@ export function addToSendfox(email, list, name, lastname) {
     lists: list.list
   }
   const config = {
-    method: 'POST',
     headers: headers,
-    redirect: 'follow',
     body: JSON.stringify(data)
   }
 
 
   return fetch('/sendfox-contact/', config)
-    .then(result => {
-      return result;
+    .then(r => {
+      console.log(r)
+      return r;
     })
     .catch(err => {
       console.log("====================================")
-      console.log(`Something bad happened while fetching the data\n${err}`)
+      console.log(err)
       console.log("====================================")
     })
 }
