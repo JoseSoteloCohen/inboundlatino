@@ -1,20 +1,23 @@
 export function addToSendfox(email, list, name, lastname) {
 
-  const encodedUrl = `https://api.sendfox.com/contacts?email=${email}&lists[]=${list.list}`;
+  const encodedUrl = '/sendfox-contact/';
 
   const headers = new Headers();
   headers.append('Authorization', `Bearer ${process.env.GATSBY_SENDFOX_API_TOKEN}`);
-  headers.append('Access-Control-Allow-Methods', 'POST');
-  headers.append('Content-Type', 'application/x-www-form-urlencoded');
-  headers.append('Access-Control-Allow-Headers', 'authorization');
 
+  const data = {
+    email: email,
+    'list': list.list
+  }
   const config = {
     method: 'POST',
     headers: headers,
     mode: 'cors',
     cache: 'default',
-    redirect:'error'
+    redirect:'error',
+    body: JSON.stringify(data)
   }
+
 
   return fetch(encodedUrl, config)
     .then(result => {

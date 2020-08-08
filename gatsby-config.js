@@ -7,11 +7,10 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
     "Contentful spaceId and the access token need to be provided."
   )
 }
-
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
 module.exports = {
   siteMetadata: {
     menu: [
@@ -58,8 +57,9 @@ module.exports = {
         start_url: `/`,
         background_color: `rgb(21, 32, 43)`,
         theme_color: `rgb(21, 32, 43)`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        display: `standalone`,
+        icon: `src/images/icon-144x144.png`,
+        legacy: false
       },
     },
   ],
