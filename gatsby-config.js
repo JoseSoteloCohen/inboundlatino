@@ -57,7 +57,7 @@ module.exports = {
         background_color: `rgb(21, 32, 43)`,
         theme_color: `rgb(21, 32, 43)`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/icons/icon-144x144.png`,
         icons: [
           {
             src: `src/images/icon.png`,
