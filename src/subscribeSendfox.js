@@ -1,27 +1,26 @@
 export function addToSendfox(email, list, name, lastname) {
 
-  const encodedUrl = '/sendfox-contact/';
-
   const headers = new Headers();
   headers.append('Authorization', `Bearer ${process.env.GATSBY_SENDFOX_API_TOKEN}`);
+  headers.append('Content-Type', 'application/json');
+  headers.append('accept', 'application/json');
+  headers.append('method', 'POST');
+  headers.append('data_format', 'body');
 
   const data = {
     email: email,
-    'list': list.list
+    lists: list.list
   }
   const config = {
     method: 'POST',
     headers: headers,
-    mode: 'cors',
-    cache: 'default',
-    redirect:'error',
+    redirect: 'follow',
     body: JSON.stringify(data)
   }
 
 
-  return fetch(encodedUrl, config)
+  return fetch('/sendfox-contact/', config)
     .then(result => {
-      console.log('resultado', result)
       return result;
     })
     .catch(err => {
