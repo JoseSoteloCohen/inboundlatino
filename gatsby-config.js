@@ -1,4 +1,6 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
@@ -8,11 +10,14 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
   )
 }
 
-
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
 module.exports = {
+  icons: [
+    {
+      src: `src/images/icon.png`,
+      sizes: `144x144`,
+      type: `image/png`,
+    }
+  ],
   siteMetadata: {
     menu: [
       { name: "Inicio", to: "/" },
@@ -58,8 +63,9 @@ module.exports = {
         start_url: `/`,
         background_color: `rgb(21, 32, 43)`,
         theme_color: `rgb(21, 32, 43)`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/icon.png`,
+        legacy: false
       },
     },
   ],
