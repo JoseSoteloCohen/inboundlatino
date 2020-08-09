@@ -19,7 +19,7 @@ const Newsletter = ({ title, subtitle, buttonCTA, list }) => {
       })
     }
 
-    const response = fetch('/.netlify/functions/post-sendfox', config)
+    const response = await fetch('/.netlify/functions/post-sendfox', config)
       .then(r => {
         return r;
       })
@@ -30,11 +30,11 @@ const Newsletter = ({ title, subtitle, buttonCTA, list }) => {
       })
 
     if (response.status !== 200) {
-      setMessage("Some error occured while subscribing you to the list.")
+      setMessage("Algo salió mal, ¿me podrias informar por medio del chat? ¡Te lo agradecería un montón!")
       setDisabled(false)
     } else {
       setMessage(
-        "Thanks! Please check your e-mail and click the confirmation link."
+        "¡Gracias! Por favor revisa tu email y confirma tu subscripción."
       )
     }
   }
