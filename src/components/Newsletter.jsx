@@ -1,6 +1,5 @@
 import classNames from "classnames"
 import React, { useState } from "react"
-import { addToSendfox } from '../subscribeSendfox'
 
 const Newsletter = ({ title, subtitle, buttonCTA, list }) => {
   const [email, setEmail] = useState()
@@ -11,18 +10,31 @@ const Newsletter = ({ title, subtitle, buttonCTA, list }) => {
     event.preventDefault()
     setDisabled(true)
     setMessage("Enviando...")
-    const response = await addToSendfox(email, { list }).then(r => 'bien').catch(err => 'falló')
 
-    if (response.result === "error") {
-      if (response.msg.toLowerCase().includes("already subscribed")) {
-        setMessage("You're already on to the list!")
-      } else {
-        setMessage("Some error occured while subscribing you to the list.")
-      }
+    const config = {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        lists: list
+      })
+    }
+
+    const response = await fetch('/.netlify/functions/post-sendfox', config)
+      .then(r => {
+        return r;
+      })
+      .catch(err => {
+        console.log("====================================")
+        console.log(err)
+        console.log("====================================")
+      })
+
+    if (response.status !== 200) {
+      setMessage("Algo salió mal, ¿me podrias informar por medio del chat? ¡Te lo agradecería un montón!")
       setDisabled(false)
     } else {
       setMessage(
-        "Thanks! Please check your e-mail and click the confirmation link."
+        "¡Gracias! Por favor revisa tu email y confirma tu subscripción."
       )
     }
   }
