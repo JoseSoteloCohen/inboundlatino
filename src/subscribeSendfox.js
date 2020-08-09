@@ -4,7 +4,6 @@ export function addToSendfox(email, list, name, lastname) {
   headers.append('Authorization', `Bearer ${process.env.GATSBY_SENDFOX_API_TOKEN}`);
   headers.append('Content-Type', 'application/json');
   headers.append('accept', 'application/json');
-  headers.append('method', 'POST');
   headers.append('data_format', 'body');
 
   const data = {
