@@ -55,10 +55,10 @@ export default props => {
           </svg>
         </div>
         <div className="ml-3">
-          <h3 className="text-sm leading-5 font-medium text-red-800">
+          <h3 className="text-md leading-5 font-medium text-red-800">
             CUIDADO
           </h3>
-          <div className="mt-2 text-sm leading-5 text-red-700">
+          <div className="mt-2 text-md leading-5 text-red-700">
             <p>{children}</p>
           </div>
         </div>
@@ -77,10 +77,10 @@ export default props => {
           </svg>
         </div>
         <div className="ml-3">
-          <h3 className="text-sm leading-5 font-medium text-blue-800">
+          <h3 className="text-md leading-5 font-medium text-blue-800">
             Información Importante
           </h3>
-          <div className="mt-2 text-sm leading-5 text-blue-700">
+          <div className="mt-2 text-md leading-5 text-blue-700">
             <p>
               {children}
             </p>
@@ -107,8 +107,6 @@ export default props => {
       </blockquote>
     </div>
   ;
-
-  //const Anchor = ({ children }) => <a className="underline-line" href={}>{children}</a>;
 
   const options = {
     renderMark: {
@@ -222,7 +220,7 @@ export default props => {
           </div>
         </div>
       </div>
-      <Newsletter title="¿Quieres recibir lo último?" subtitle="¡Subscribete a mi newsletter semanal!" buttonCTA="Notificame" list="146796"/>
+      <Newsletter title="¿Quieres recibir lo último?" subtitle="Te notificaré apenas lance una reseña nueva, seguro vendrá acompañada de una promo" buttonCTA="¡Subcríbeme!" list="146796"/>
       <div className="container">
         <HyvorTalk.Embed websiteId={process.env.GATSBY_HYVOR_SITE_TOKEN} />
       </div>
