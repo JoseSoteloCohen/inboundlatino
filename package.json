@@ -33,7 +33,7 @@
     "react-id-swiper": "^3.0.0",
     "react-lottie": "^1.2.3",
     "react-syntax-highlighter": "^12.2.1",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "tailwindcss": "^1.4.4",
     "typeface-inter": "^3.12.0"
   },
